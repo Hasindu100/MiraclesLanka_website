@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+nav {
+    background: rgb(71, 69, 69);
+}
+
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+    float: left;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    background: rgb(71, 69, 69);;
+    margin: 0 5px;
+    float: left;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover {
+    color: cyan;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33ffff,
+                0 0 5px #66ffff;
+}
+
+nav ul ul li a:hover {
+    color: cyan;
+    box-shadow: none;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid cyan;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+
+nav ul li:hover > ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li {
+position: relative;
+margin: 0px;
+width: 150px;
+float: none;
+display: list-item;
+border-bottom: 1px solid #f2f2f2;
+}
+
+nav ul ul li a {
+    line-height: 50px;
+}
+.show,.icon, input {
+    display: none;
+}
+
+
+.col {
+    background: red;
+}
+
+.side-menu {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.side-menu .drop-btn {
+    width: 400px;
+    background: #242526;
+    color: #b0b3b8;
+    line-height: 50px;
+    padding: 0 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.side-menu .drop-btn span {
+    float: right;
+    line-height: 50px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.side-menu .wrapper {
+    position: absolute;
+    top: 65px;
+    display: flex;
+    width: 1200px;
+    background: #242526;
+    border-radius: 5px;
+}
+
+.side-menu .wrapper ul {
+    list-style: none;
+    width: 400px;
+    padding: 10px;
+}
+
+.side-menu .wrapper ul li {
+    line-height: 55px;
+}
+
+.side-menu .wrapper ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #b0b3b8;
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 10px;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.side-menu .wrapper ul li a:hover {
+    background: #3A3B3C;
+}
+
+.side-menu .wrapper ul li a.icon {
+    height: 40px;
+    width: 40px;
+    margin-right: 13px;
+    background: #fffffffa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.side-menu .wrapper ul li a i {
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+    pointer-events: none;
+}
+
+.side-menu .setting-drop .arrow {
+    padding-left: 10px;
+    font-size: 20px;
+    color: #b0b3b8;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.side-menu .setting-drop li span {
+    margin-right: 15px;
+
+}
+
+@media all and (max-width: 968px) {
+    nav {
+        margin-right: 0px;
+        float: left;
+    }
+    nav.logo {
+        padding-left: 30px;
+        width: 100%;
+    }
+    nav ul li, nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+    nav ul ul{
+        top: 70px;
+        position: static;
+        border-top: none;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    nav ul ul li {
+        border-bottom: 0px;
+    }
+    nav ul ul a {
+        padding-left: 40px;
+    }
+    .show {
+        display: block;
+        color: white;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    nav ul li a:hover {
+        box-shadow: none;
+    }
+    .show:hover {
+        color: cyan;
+    }
+    .icon {
+        display: block;
+        color: white;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .show + a,ul {
+        display: none;
+    }
+    [id^=btn]:checked + ul{
+        display: block;
+    }
+}

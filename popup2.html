@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style2.css">
+  
+<style>
+.w3-button {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  color: #fff;
+}
+
+.w3-button.w3-display-right {
+  right: 0;
+}
+</style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><img src ="images/123880284_102022315057554_6400407058210913611_o copy.png"><span id="text">Mirakels Life International</span></div>
+        <ul>
+            <li><a href="index.php"><i class="fas fa-home" id="icons"></i><span id="text">Home</span></a></li>
+            <li>
+                
+                <a href="#features"><i class="fas fa-building" id="icons"></i><span id="text">Departments</span></a>
+                
+                <ul>
+                    <li><a href="#Land">Pages</a></li>
+                    <li><a href="#cctv">Eliments</a></li>
+                    <li><a href="#cctv">icons</a></li>
+                </ul>
+            </li>
+                
+            <li>
+                <a href="allservices.php"><i class="fas fa-briefcase" id="icons"></i><span id="text">Services</span></a>
+            </li>
+                
+            <li><a href="#login" data-toggle="modal" data-target="#exampleModalCenter-2"><i class="fas fa-user" id="icons"></i><span id="text">Register</span></a></li>
+        </ul>
+    </nav>
+
+    <h2 class="w3-center">Manual Slideshow</h2>
+
+    <div class="w3-content w3-display-container" style="width: 400px;">
+      <img class="mySlides" src="images/123880284_102022315057554_6400407058210913611_o.jpg" style="width:100%">
+      <img class="mySlides" src="images/images.jpg" style="width:100%">
+      <img class="mySlides" src="images/124256236_104620754797710_4400351746337063551_n.jpg" style="width:100%">
+      <img class="mySlides" src="images/Blog-Post-Opener.jpg" style="width:100%">
+    
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
+    
+
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLongTitle">Are You a Service Provider ?</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>Register here for joining with us...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+           <div class="container-1">
+               <h1>ANY JOB </br> ANY TIME </br> ANY WHERE</h1>
+               <P>New way to find people to do your jobs. If you are one of those thousands
+                 of people who struggle to find people to do Jobs or struggle to find jobs, this is for you</P>
+                 <button class="btn btn-danger">Register with us</button>
+           </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="slideshow cycle-slideshow" data-cycle-timeout="4000">
+                <img src="images/126824427_118153510111101_4653509789760906443_o.jpg" width="400px">
+                <img src = "images/124256236_104620754797710_4400351746337063551_n.jpg">
+                <img src="images/124657037_104355581490894_3859936742854601987_o.jpg" width="400px">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <h3 id="service-head">OUR SERVICES</h3>
+        <div class="col-sm-4" style="display: flex;justify-content: space-around;">
+           <a href="index.php">
+                <div class="container-2">
+                    <i class="fas fa-home"></i>
+                    <h5>House</h5>
+                </div>
+           </a>
+           <div class="container-2">
+                <i class="fas fa-car"></i>
+                <h5>Vehicle</h5>
+            </div>
+        </div>
+        <div class="col-sm-4" style="display: flex;justify-content: space-around;">
+            <div class="container-2">
+                <i class="fas fa-cogs"></i>
+                <h5>Technitions</h5>
+           </div>
+           <div class="container-2">
+                <i class="fas fa-users"></i>
+                <h5>Professional</h5>
+            </div>
+        </div>
+        <div class="col-sm-4" style="display: flex;justify-content: space-around;">
+            <div class="container-2">
+                <i class="fas fa-laptop"></i>
+                <h5>IT</h5>
+           </div>
+           <div class="container-2">
+                <i class="fab fa-buysellads"></i>
+                <h5>Ads</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" style="display: flex;justify-content: space-around;">
+                <div class="about-us">
+                    <h3>ABOUT US</h3>
+                    <P>Sri Lanka’s premier Construction , Industrial and Engineering market place. 
+                        Surplus.lk is the ultimate platform to dispose of trade surplus materials , 
+                        buy rent or sell building materials , building products , tools and equipment , 
+                        Industrial machinery and find professional services. Bringing buyers and sellers 
+                        together with a simple click of a button, Surplus.lk offers you a unique service 
+                        that is absolutely free of charge. . 
+
+                        If you are a service provider, professional or skilled worker in the Construction, 
+                        Engineering & Industrial sector you can now list, your services, products equipment 
+                        on Surplus.lk absolutely free of charge.  
+                        
+                        Surplus.lk has hundreds of products and services dedicated to the Construction, 
+                        Engineering & Industrial sectors. Sellers can advertise their products and services 
+                        freely under a suitable category making them easily visible & searchable to all customers 
+                        who can directly contact the seller or service provider with an inquiry. Surplus.lk is the 
+                        dedicated platform that connects buyers and sellers in all things Construction, Engineering & Industrial.</P>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

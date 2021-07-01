@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+nav {
+    background: linear-gradient(90deg, #53c411, #787e78);
+    z-index: 6;
+    width: 100%;
+    position: fixed;
+    
+    
+    
+}
+
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+    float: left;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+}
+nav .logo img {
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+    border: 3px solid #ccc;
+    border-radius: 50%;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+nav ul li {
+    float: left;
+    display: inline-block;
+
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover {
+    color: cyan;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33ffff,
+                0 0 5px #66ffff;
+}
+
+nav ul ul li a:hover {
+    color: cyan;
+    box-shadow: none;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid cyan;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+    background: linear-gradient(90deg, #0be616, #d5f8d4);
+}
+
+nav ul li:hover > ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li {
+position: relative;
+margin: 0px;
+width: 150px;
+float: none;
+display: list-item;
+border-bottom: 1px solid #f2f2f2;
+}
+
+nav ul ul li a {
+    line-height: 50px;
+}
+.show,.icon, input {
+    display: none;
+}
+
+
+.col {
+    background: #ccc;
+}
+
+
+.side-menu{
+    margin-top: 110px;
+    width: 20%;
+    background: white;
+    border: 1px solid rgb(58, 55, 55);
+    border-radius: 5px;
+    position: fixed;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+.side-menu h2{
+    text-align: center;
+}
+.side-menu ul li, .side-menu ul ul li {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.side-menu ul ul{
+    margin-left: 20px;
+}
+.side-menu ul li i {
+    margin: 10px;
+    color: rgb(58, 55, 55);
+}
+.side-menu ul ul li a:hover {
+    color:rgb(22, 145, 39);
+}
+.side-menu ul ul li:last-child{
+    border-bottom: none;
+}
+.side-menu a{
+    text-decoration: none;
+    color: rgb(58, 55, 55);
+}
+
+.side-menu2{
+    margin-top: 10px;
+    background: white;
+    border: 1px solid rgb(58, 55, 55);
+    border-radius: 5px;
+    
+    max-height: 500px;
+    overflow-y: scroll;
+}
+.side-menu2 h2{
+    text-align: center;
+}
+.side-menu2 ul li, .side-menu ul ul li {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.side-menu2 ul ul{
+    display: none;
+}
+.side-menu2 ul li i {
+    margin: 10px;
+    color: rgb(58, 55, 55);
+}
+.side-menu2 ul ul li a:hover {
+    color:rgb(22, 145, 39);
+}
+.side-menu2 ul ul li{
+    border-bottom: none;
+}
+.side-menu2 a{
+    text-decoration: none;
+    color: rgb(58, 55, 55);
+}
+[id^=btn]:checked + ul{
+    display: block;
+}
+
+.mobile-menu{
+    text-align: center;
+    margin: 10px;
+    display: none;
+}
+
+.services {
+    padding: 10px;
+    margin: 10px;
+    margin-top: 110px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow:  0 0 10px rgb(46, 44, 44),
+                0 0 10px #ccc;
+}
+.services img{
+    width: 90%;
+    margin: auto;
+}
+.services h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+.services h5{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ccc;
+}
+
+.register-form {
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+@media all and (max-width: 968px) {
+  
+    nav.logo {
+        padding-left: 30px;
+        width: 100%;
+    }
+    nav ul li, nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+    nav ul ul{
+        top: 70px;
+        position: static;
+        border-top: none;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    nav ul ul li {
+        border-bottom: 0px;
+    }
+    nav ul ul a {
+        padding-left: 40px;
+    }
+    .show {
+        display: block;
+        color: white;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    nav ul li a:hover {
+        box-shadow: none;
+    }
+    .show:hover {
+        color: cyan;
+    }
+    .icon {
+        display: block;
+        color: white;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .show + a,nav ul, nav ul ul {
+        display: none;
+    }
+    [id^=btn]:checked + ul{
+        display: block;
+    }
+
+    .menu1{
+        display: none;
+    }
+    .side-menu {
+        margin-top: 10px;
+        border: inherit;
+    }
+    .mobile-menu{
+        visibility: visible;
+        display: block;
+        margin-top: 80px;
+    }
+    .services{
+        margin-top: 10px;
+    }
+    
+   
+}
